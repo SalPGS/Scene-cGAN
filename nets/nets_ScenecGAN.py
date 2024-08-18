@@ -7,6 +7,7 @@
 import torch
 from torch import nn
 from torchvision.models import resnet50, ResNet50_Weights
+from nets.losses import init_weights, Gradient, GANLoss
 
 
 class Gaussian_Noise(nn.Module):
