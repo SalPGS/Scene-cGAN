@@ -11,7 +11,6 @@ import torch.optim as optim
 
 #Local libraries
 from data.load_datasets import train_data, BATCH_SIZE
-from nets.nets_ScenecGAN import UnetUnder, tResUnet2RGB, Unet, ViT
 from nets.utils import create_loss_meters, update_losses, loss_results
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
