@@ -22,20 +22,20 @@ G3=  Unet(backbone_name='resnet50').to(device)
 
 # Download the model weights https://drive.google.com/drive/folders/1gLW6KjeYah3B3sgJYSG3vXED9M758XIv?usp=sharing
 #Load state dic
-G1.load_state_dict(torch.load(f'E:\My_Python\GAN\GAN_VS\GAN_Depth\Rebuttal\weights\weights\\net_G1_v10_epoch_20.pth', map_location=device))
-G2.load_state_dict(torch.load(f'E:\My_Python\GAN\GAN_VS\GAN_Depth\Rebuttal\weights\weights\\net_G2_v10_epoch_20.pth', map_location=device))
-G3.load_state_dict(torch.load(f'E:\My_Python\GAN\GAN_VS\GAN_Depth\Rebuttal\weights\weights\\net_G3_v10_epoch_20.pth', map_location=device))
+G1.load_state_dict(torch.load('path\net_G1_v10_epoch_20.pth', map_location=device))
+G2.load_state_dict(torch.load('path\net_G2_v10_epoch_20.pth', map_location=device))
+G3.load_state_dict(torch.load('path\net_G3_v10_epoch_20.pth', map_location=device))
 
 
 #Input path
-input_path = f"E:\My_Python\GAN\GAN_VS\GAN_Depth\SERVER\Datasets\\SCHMIDT"
+input_path = "inputh folder path "
 
 os.chdir(input_path)
 img_folder = os.listdir(input_path)
 
 #Output path
-output_restored = f"E:\My_Python\GAN\GAN_VS\GAN_Depth\Rebuttal\\New_method\\SCHMIDT_WT_G1"
-output_depth = f"E:\My_Python\GAN\GAN_VS\GAN_Depth\Rebuttal\\New_method\\SCHMIDT_WT_G3"
+output_restored = "Path for restored images"
+output_depth = "Path for depth estimation"
 
 #Mode eval
 G1.eval()
